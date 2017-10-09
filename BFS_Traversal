@@ -1,0 +1,17 @@
+// by using queue
+
+bfs( ){
+  while( head <= tail ){
+    cur = que( head );
+    
+    //kernel of BFS traversal, different code base on different data structure;
+    for( i = 0; i <n; i++　){
+      if( e[cur][i] != INF && book[i] == 0 ){
+        book[i] = 1;
+        que[tail] = i;
+        tail++;
+      }
+    }
+    
+    head++;
+  }
