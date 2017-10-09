@@ -1,0 +1,18 @@
+int sum = 0; // accumulation of the traverse times
+int book[n] = 0; //mark whether the point is visited
+
+dfs( cur ){
+
+  // base of recursion
+  sum ++;
+  if( sum == n ) return;
+
+  // kernel of traverse, different code base on different data structure
+  for( i = 0; i < n; i++ ){
+    if( e[cur][i] != INF && book[i] = 0 ){
+      book[i] = 1;
+      dfs(i);
+    }
+  }
+  return; // beyond the for circulation, that means have touched the deepest bottom, should return now.
+}
