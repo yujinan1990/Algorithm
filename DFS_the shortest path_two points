@@ -1,0 +1,26 @@
+// find the shortest path between current point and destinate point by DFS
+
+double dis = ０;
+
+dfs( cur, dis ){
+  
+  //base of recursion
+  if( dis > min ) return;
+  if( cur == target ){
+    if( dis < min ){
+      min = dis;
+    }
+  return;
+  }
+  
+  //kernel of traversal, base on different data structure
+  for( i = 0; i < n ; i++){
+   if( e[cur][i] != INF && book[i] == 0 ){
+     book[i] = 1;
+     dfs( i, dis +　e[cur][i] );  // the dis of new recursion is dis + e[cur][i].
+     book[i] = 0;  // every point could belong to different path, so it should be released
+   }
+ }
+ return;
+ 
+}
