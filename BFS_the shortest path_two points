@@ -1,22 +1,25 @@
 // find the shortest path between current point and destinate point by BFS
 // precondition is the weight of edge is the same
 
+
+
 bfs(){
-  while( head <= tail ){
+
+int que[n];
+int head = 0, tail = 0;
+while( head <= tail ){
     cur = que[ head ];
-    
-    
-    
+     
     for( i = 0; i < n; i++ ){
       if( e[cur][i] != INF && book[i] ){
         book[i] = 1;
         que[tail] = i;
         tail++;
       }
-    sum += weight;
+      sum += weight;
+      if( i == target ) break;
     }
-    
-    
+    if
     
     head++;
   }
