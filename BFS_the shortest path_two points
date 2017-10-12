@@ -1,5 +1,5 @@
 // find the shortest path between current point and destinate point by BFS
-// precondition is the weight of edge is the same
+// precondition is that the weight of edge is the same
 
 
 
@@ -7,20 +7,22 @@ bfs(){
 
 int que[n];
 int head = 0, tail = 0;
+int mark = 0; // to mark weather we have find the target
 while( head <= tail ){
     cur = que[ head ];
      
     for( i = 0; i < n; i++ ){
-      if( e[cur][i] != INF && book[i] ){
-        book[i] = 1;
-        que[tail] = i;
-        tail++;
-      }
-      sum += weight;
-      if( i == target ) break;
+        if( e[cur][i] != INF && book[i] != 1 ){
+            book[i] = 1;
+            que[tail] = i;
+                if( i == target ){
+                    mark = 1;
+                    break;
+                }
+            tail++;
+        }
     }
-    if
-    
+    sum += weight;
+    if( mark == 1 ) break; 
     head++;
-  }
 }
