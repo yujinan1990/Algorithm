@@ -1,0 +1,16 @@
+// the DataElement can be saved as adjacency matrix or adjacency list
+
+// adjacency matrix
+
+int n, m; // n is the number of points, m is the number of edge
+float e[n][n]; //e[n1][n2] is weight of edge of point n1 to point n2
+
+int i, j, k;
+for( k = 0, i < n, k++){
+  for( i = 0, i < n, i++ ){
+    for( j = 0, j < n, j++ ){
+        if( e[i][k] + e[k][j] < e[i][j] ) e[i][j] = e[i][k] + e[k][j]; // it will change the original matrix
+    }
+  }
+}
+
