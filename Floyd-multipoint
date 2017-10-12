@@ -14,3 +14,8 @@ for( k = 0, i < n, k++){
   }
 }
 
+
+// adjacency list
+
+
+
